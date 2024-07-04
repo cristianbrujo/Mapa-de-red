@@ -16,6 +16,7 @@ function makeid(length) {
 }
 
 const parametrosRed = {
+  wifi: "arriba",
   red: "192.168.1.0",
   mask: "255.255.255.0",
   enlace: "192.168.1.1",
@@ -258,6 +259,16 @@ personas.forEach((persona) => {
     parametrosRed
   );
   nuestraRed.push(equipo);
+  console.log("  " + "Alumno:" + equipo.alumno)
+  console.log("  " + "Nombre:" + equipo.nombre)
+  console.log("  " + "Ip:" + equipo.ip)
+  console.log("  " + "Password:" + equipo.password)
+  console.log("  " + "Red:" + equipo.red)
+  console.log("  " + "Mask:" + equipo.mask)
+  console.log("  " + "Enlace:" + equipo.enlace)
+  console.log("  " + "DNS:" + equipo.dns)
+  console.log("  " + "Ssid:" + equipo.ssid)
+  console.log("-----------------------------------")
 });
 
 fs.writeFile(FILENAME, JSON.stringify(nuestraRed, null, 4), (err) => {
